@@ -226,4 +226,5 @@ readMay :: Prelude.Read a => [Prelude.Char] -> Prelude.Maybe a
 readMay s =
     case Prelude.reads s of
         (x, []):_ -> Prelude.Just x
+        (_, l):_ -> Prelude.Nothing
         [] -> Prelude.Nothing
